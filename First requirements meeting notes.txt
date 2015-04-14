@@ -1,0 +1,47 @@
+First meeting 13.00-16.12
+
+an animated, interactive part
+a resizable screen
+interaction with graphics
+an interactive help/tutorial system
+at least one media file (sound, video, etc.)
+multi/bilingual interface
+undo/redo (when feasible)
+
+Ask Lars:
+Zoho.
+Last member.
+Time tracking.
+
+Requirements:
+Page handled by the CMS:
+News
+	Add a News
+	Remove a News
+	Edit a News
+Tours and activities (includes festivals)
+	Add a new tour
+		Set dates available (always available an option)
+		Set price(s) (per person, duration, minimum, static)
+		Set duration (date)
+		Set category (Budget, Classic, Historical, Culture, Adventure)
+		Set promotion (New, Recommended, none)
+	Set new categories
+	Remove category
+	Remove
+	Edit
+Tickets (travel to Mongolia)
+	(Static?)
+Vehicle Rental
+	Add new vehicle
+		Price (per day)
+		Information (text)
+To do in Mongolia (information, see, not do)
+	Add subcategory (menu)
+	Add page
+		add subcategories (to see, to not do)
+	Remove page
+	Edit page
+Contact us
+	Edit the information in the page
+Purge deleted?
