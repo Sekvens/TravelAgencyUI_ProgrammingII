@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TTR Mongolia - Actions</title>
+		<meta name="description" content="Blueprint: Responsive Full Width Tabs" />
+		<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
+        <script src="../js/listView.js"></script>
+        <script src="../js/actions_data.js"></script>
+        <!-- Boothstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://www.cssreset.com/downloads/css-resets/html5-doctor-reset-stylesheet/html5-doctor-reset-stylesheet.css" />
+        <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="../css/listView.css" />
+    </head>
+	<body>
+        <div id="container">
+            <div id="header"></div>
+            <!--  ACTUAL CONTENT -->
+            <div id="content">
+                <!-- BUTTON -->
+                <div style="text-align: right">
+                    <a class="btn btn-default" id="filterButton">Show Filter</a>
+                </div>
+                <!-- FILTER PANEL -->
+                <div id="filterPanel" class="panel panel-default">
+                    <div class="form-group">
+                        <p style="margin: 0.5em">Search Option</p>
+                        <div>
+                        <div style="float: left; padding: 0.5em">
+                            <span>Search by name:</span><input style="margin: 0.5em; width: auto; display: inline" type="email" class="form-control" id="searchKey" placeholder="Search">                                                     </div>
+                        <div style="float: right; padding: 0.5em; margin: 0.5em">
+                            Tour Type:&nbsp;<span>
+                            <input type="checkbox" id="chkShort" onchange="chkUpdate('Short')" checked="true">&nbsp;Short&nbsp;<input type="checkbox" id="chkClassic" onchange="chkUpdate('Classic')" checked="true">&nbsp;Classic&nbsp;<input type="checkbox" id="chkSpecial" onchange="chkUpdate('Special')" checked="true">&nbsp;Special</span>
+                        </div>
+                        <div style="clear: both"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ACTUAL CONTENT -->
+                <div class="container-fluid panel-group">
+                    <div id="filteredData" class="row">
+                    </div>
+                </div>
+                <a class="clickableText" style="display: block; clear: both">Book Now!</a>              
+            </div>
+        </div>
+        <div id="footer"></div>
+    </body>
+</html>
