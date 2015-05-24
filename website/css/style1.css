@@ -12,7 +12,7 @@
             color:#585858;
             text-align:left;
             padding:5px;
-            width:650px
+            /* width:1300px */
             }
         #nav {
             font-family:georgia;
@@ -30,7 +30,15 @@
             padding:10px;
             line-height:30px 
             }
-        #footer {
+		#aside {
+			font-family:georgia;
+			clear:right;
+			width:700px;
+			/* background-color:#eeeeee; */
+			float:right;
+			padding:10px;
+			}
+		#footer {
             font-family:georgia;
 			background-color:#eeeeee;  
             clear:both
