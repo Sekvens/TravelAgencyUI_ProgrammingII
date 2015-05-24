@@ -1,0 +1,36 @@
+        <!DOCTYPE CSS>
+		
+        body {font-family:georgia}
+        
+        a:link    {color:#8D0070;; background-color:transparent; text-decoration:none}
+        a:visited {color:#8D0070; background-color:transparent; text-decoration:none}
+        a:hover   {color:blue; background-color:transparent; text-decoration:underline}
+        a:active  {color:blue; background-color:transparent; text-decoration:underline}
+        
+        #header {
+            background-color:#eeeeee;
+            color:#585858;
+            text-align:left;
+            padding:5px;
+            width:650px
+            }
+        #nav {
+            line-height:35px;
+            background-color:#eeeeee;
+            color:#8D0070;
+            width:100px;
+            float:left;
+            padding:5px;	      
+            }
+        #article {
+            width:450px;
+            float:left;
+            padding:10px;
+            line-height:30px 
+            }
+        #footer {
+            background-color:#eeeeee;  
+            clear:both
+            }    
+        
+        
