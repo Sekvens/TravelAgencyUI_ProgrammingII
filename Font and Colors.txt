@@ -1,0 +1,26 @@
+Website font: 
+georgia
+
+Colors:
+
+Text color:
+Black
+
+Link color:
+Purple (from logo)
+R: 141
+G: 0
+B: 112
+#8D0070
+
+Headings:
+Grey (slightly darker than logo)
+R: 88
+G: 88
+B: 88
+#585858
+
+Navigation background:
+Light grey
+#EEEEEE
+
