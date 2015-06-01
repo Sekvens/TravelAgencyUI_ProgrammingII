@@ -4,8 +4,8 @@ $(document).ready(function(){
     function rescalehelpfunction(selector) {
         var $target = $(selector);
         $target.each(function () {
-            var pheight = $(this).parent().height();
-            var pwidth = $(this).parent().width();
+            var pheight = $(this).parent().closest('div').height();
+            var pwidth = $(this).parent().closest('div').width();
             $(this).aeImageResize({ height: (pheight), width: (pwidth) });
         })
     }
