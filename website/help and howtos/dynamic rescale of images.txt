@@ -1,0 +1,27 @@
+Ensure the scripts are declared and in this order:
+<script src="jquery.ae.image.resize.js" type="text/javascript"></script> 
+<script src="../js/global.js" type="text/javascript"></script> 
+
+Surround a image with a div and set the image class to resizeable. Style the div and the picture follows the div's size.
+
+If rescaling on other events you can target a specific element with the jquery function .resize().
+
+Examples:
+    HTML:
+    <div class='imageContainer'>
+        <img alt="Woody" class="resizeable" src="Woody.jpg" />
+    </div>
+    <div class='eventDriven'>
+        <img alt="Woody" id="oddOne" src="Woody.jpg" />
+    </div>    
+    CSS:
+    .imageContainer {
+        height: 200px;
+        width: 200px;
+    }
+    .eventDriven {
+        height: 10px;
+        width: 10px;
+    }
+
+This would give two pictures where the first would be resized upon page load to the size of imageContainer. A jquery call to $("#oddOne").resize(); would resize the second picture to the size of .eventDriven.
