@@ -2,7 +2,7 @@
 
 body {
     background-color: #F9F9F9;
-    font-family: 'Maven Pro',Arial, sans-serif;
+    font-family: georgia, Arial, sans-serif;
     color: rgb(67,74,84);
 }
 
@@ -10,8 +10,9 @@ body {
     max-width: 960px;
     margin: 0 auto;
     border: 1px;
-    border-color: black;
-    border-style: dashed;
+    border-color: #E7E7E7;
+    border-style: line;
+    box-shadow: 0px 0px 5px #A6A6A6;
 }
 
 #header {
@@ -27,6 +28,13 @@ body {
 #content {
     padding: 0.5em;
     text-align: center;
+}
+
+#footer {
+    padding: 1em;
+    text-align: center;
+    vertical-align: middle;
+    color: #585858;
 }
 
 #filterPanel {
@@ -108,4 +116,9 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: #aaa;
+}
+
+
+#bs-example-navbar-collapse-2:after {
+    z-index: 990;
 }

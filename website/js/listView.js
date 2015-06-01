@@ -110,7 +110,7 @@ function chkUpdate(tourType)
     //var tourTypeCheckClassic = true;
     //var tourTypeCheckSpecial = true;
     checkTourType = new Array();
-    
+    /*
     if(tourType == 'Short' && document.getElementById('chk' + tourType).checked)
         checkTourType.push('short');
         //tourTypeCheckShort = document.getElementById('chk' + tourType).checked;
@@ -120,7 +120,21 @@ function chkUpdate(tourType)
     else if(tourType == 'Special' && document.getElementById('chk' + tourType).checked)
         checkTourType.push('special');
         //tourTypeCheckShort = document.getElementById('chk' + tourType).checked;
-
+    */
+    
+    // Force check
+    if(document.getElementById('chkShort').checked)
+        checkTourType.push('short');
+        //tourTypeCheckShort = document.getElementById('chk' + tourType).checked;
+    if(document.getElementById('chkClassic').checked)
+        checkTourType.push('classic');
+        //tourTypeCheckShort = document.getElementById('chk' + tourType).checked;
+    if(document.getElementById('chkSpecial').checked)
+        checkTourType.push('special');
+    
+    for(var i = 0; i < checkTourType.length; i++)
+        console.log(checkTourType[i]);
+    
     searchCondition();
 }
 
