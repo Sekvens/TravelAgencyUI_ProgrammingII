@@ -22,4 +22,7 @@ $(document).ready(function(){
     /*Rescale the resizeable class when document is loaded*/
     rescale();
     
+    /*Loading in different parts of the website.*/
+    $("#nav").load("html/header3.html");
+    
 });

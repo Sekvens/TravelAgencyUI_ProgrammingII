@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$("nav").load("html/headers.html");
+	$("#nav").load("html/header3.html");
 });

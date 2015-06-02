@@ -1,47 +1,58 @@
-        /* CSS template for styles and layout of basic text page */
-		
-                
-        a:link    {color:#8D0070;; background-color:transparent; text-decoration:none}
-        a:visited {color:#8D0070; background-color:transparent; text-decoration:none}
-        a:hover   {color:blue; background-color:transparent; text-decoration:underline}
-        a:active  {color:blue; background-color:transparent; text-decoration:underline}
-        
-        #header {
-            font-family:georgia;
-			background-color:#eeeeee;
-            color:#585858;
-            text-align:left;
-            padding:5px;
-            /* width:1300px */
-            }
-        #nav {
-            font-family:georgia;
-			line-height:2em;
-            background-color:#eeeeee;
-            color:#8D0070;
-            width:100px;
-            float:left;
-            padding:5px;	      
-            }
-        #article {
-            font-family:georgia;
-			width:450px;
-            float:left;
-            padding:10px;
-            line-height:1.5em 
-            }
-		#aside {
-			font-family:georgia;
-			clear:right;
-			width:700px;
-			/* background-color:#eeeeee; */
-			float:right;
-			padding:10px;
-			}
-		#footer {
-            font-family:georgia;
-			background-color:#eeeeee;  
-            clear:both
-            }    
-        
+/* CSS template for styles and layout of basic text page */
+     
+a:link    {color:#8D0070;; background-color:transparent; text-decoration:none}
+a:visited {color:#8D0070; background-color:transparent; text-decoration:none}
+a:hover   {color:blue; background-color:transparent; text-decoration:underline}
+a:active  {color:blue; background-color:transparent; text-decoration:underline}
+
+#header {
+    font-family:georgia;
+    background-color:#eeeeee;
+    color:#585858;
+    text-align:left;
+    padding:5px;
+    /* width:1300px */
+    }
+#nav {
+    font-family:georgia;
+    line-height:2em;
+    background-color:#eeeeee;
+    color:#8D0070;
+    width:100px;
+/*    float:left;
+    padding:5px;*/	      
+    }
+#article {
+    font-family:georgia;
+    width:450px;
+    float:left;
+    padding:10px;
+    line-height:1.5em 
+    }
+#aside {
+    font-family:georgia;
+    clear:right;
+    width:700px;
+    /* background-color:#eeeeee; */
+    float:right;
+    padding:10px;
+    }
+#footer {
+    font-family:georgia;
+    background-color:#eeeeee;  
+    clear:both
+    }
+#main {
+    margin-left: 5%;
+    }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: strong;
+    }
+h1 {
+    font-size: 18px;
+}
+h2 {
+    font-size: 16px;
+}
+
         
