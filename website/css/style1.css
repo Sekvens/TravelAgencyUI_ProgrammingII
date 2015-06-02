@@ -16,7 +16,7 @@
             }
         #nav {
             font-family:georgia;
-			line-height:35px;
+			line-height:2em;
             background-color:#eeeeee;
             color:#8D0070;
             width:100px;
@@ -28,7 +28,7 @@
 			width:450px;
             float:left;
             padding:10px;
-            line-height:30px 
+            line-height:1.5em 
             }
 		#aside {
 			font-family:georgia;
