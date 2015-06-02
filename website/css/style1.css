@@ -62,12 +62,13 @@ h2 {
 /*This is the container for the navigation menu's links*/
 .navbar-default .navbar-nav > li > a{
     color: #585858;
-    background-color: #F9F9F9
+    background-color: #f9f9f9;
 }
 .navbar-default {
-    background-color: #f9f9f9
+    background-color: #f9f9f9;
 }
 .navbar-default .navbar-nav > li > a:hover{
     text-decoration: underline;
+    background-color: #f0f0f0;
 }
         
