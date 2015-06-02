@@ -83,3 +83,12 @@ p{
 .not-active {
     pointer-events: none;
 }
+#footer {
+padding: 1em;
+text-align: center;
+vertical-align: middle;
+color: #585858;
+}
+#footer p {
+margin-top: 0em;
+padding: 0em 5em;
