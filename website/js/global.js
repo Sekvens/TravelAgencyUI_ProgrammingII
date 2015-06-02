@@ -24,5 +24,6 @@ $(document).ready(function(){
     
     /*Loading in different parts of the website.*/
     $("#nav").load("html/header3.html");
+    $("#slider").load("html/slider.html");
     
 });
