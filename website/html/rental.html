@@ -1,29 +1,145 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Welcome to the Rental page!</title>
-	<nav>
-		<a href="./news.html">News</a>
-		<a href="./activities.html">Tours and Activities</a>
-		<a href="./tickets.html">Travel to Mongolia</a>
-		<a href="./rental.html">Rental</a>
-		<a href="./todo.html">See Mongolia</a>
-		<a href="./contact.html">Contact us</a>
-	</nav>
-</head>
-<body>
-	<article>
-		<h1>Want to rent something?</h1>
-		<p>This page should contain information about rental of aparments and cars. </p>
-		
-		<p>Bacon ipsum dolor amet biltong beef pork loin short loin, frankfurter turducken pork ball tip meatball pork chop ground round chicken short ribs tri-tip. Kevin t-bone rump, alcatra bacon ham hock corned beef jerky. Shankle andouille chicken beef ribs. Shank meatball ham hock strip steak pork loin biltong boudin pastrami turkey kevin ham picanha tri-tip. Pig strip steak doner spare ribs hamburger boudin landjaeger tenderloin t-bone. Kielbasa boudin tail, pork loin landjaeger sausage ham hock shank fatback flank.</p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TTR Mongolia - Rental</title>
+		<meta name="description" content="Blueprint: Responsive Full Width Tabs" />
+		<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
 
-		<p>Pork chop andouille beef ribs corned beef short loin jerky tail turducken. Swine t-bone meatball porchetta. Tongue tenderloin meatball meatloaf beef ham hock pork loin. Venison salami sausage, kevin picanha pork chop ham flank ball tip andouille pork belly drumstick brisket fatback beef ribs. Pork chop corned beef frankfurter beef ribs filet mignon bresaola chicken capicola cupim cow. Pork chop venison porchetta hamburger. Ham hock pastrami short ribs, shankle turducken t-bone kevin biltong.</p>
+        <!-- Boothstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://www.cssreset.com/downloads/css-resets/html5-doctor-reset-stylesheet/html5-doctor-reset-stylesheet.css" />
+        <link rel="stylesheet" type="text/css" href="../css/listView.obs.css" />
+        <style>
+        #filteredData img{
+            width: 60%;
+            border-color: #58586F;
+            border-width: 1px;
+            border-style: solid;
+            margin: 0.5em 0em;
+        }
+            
+        .title {
+            color: #8D0070;
+            font-size: 1.25em;
+        }
 
-		<p>Prosciutto sirloin leberkas, corned beef pastrami spare ribs ball tip drumstick tenderloin ham rump chuck short loin shank. Frankfurter prosciutto hamburger, swine ball tip brisket meatball filet mignon turducken. Pig brisket cow landjaeger pork chop meatball. Salami ground round sausage pastrami ham hock chicken. Jerky bresaola tongue sirloin pork chop.</p>
+        h1{
+            text-align: center;
+            font-size: 2em;
+            color: #8D0070;
+        }
+            
+        P {
+            margin-top: 0.5em;        
+        }
 
-		<p>Filet mignon sausage bresaola, tri-tip alcatra ham hock cow bacon jerky. Meatball pork belly landjaeger short ribs. Tri-tip jerky beef ribs doner chicken. Turducken boudin andouille, meatball strip steak prosciutto frankfurter filet mignon cow sausage rump. Beef ribs alcatra ball tip drumstick. Shankle pig ball tip brisket beef.</p>
-	</article>
-</body>
+        #footer {
+            padding: 1em;
+            text-align: center;
+            vertical-align: middle;
+            color: #585858;
+        }
+
+        #footer p {
+           margin-top: 0em;
+            padding: 0em 5em;
+        }
+        
+        .col-sm-6
+        {
+            padding: 1em;
+            height: 360px;
+        }
+        </style>
+    </head>
+	<body>
+        <div id="container">
+            <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>        
+                             <a href="#" class="navbar-brand" style="padding: 0" ><img src="../images/logo.png"></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2"  >
+                            <ul class="nav navbar-nav">
+                                <li><a href="./todo.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration = 'none'" data-locale="todo">See Mongolia</a></li>
+                                <li><a href="./news.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'"  data-locale="news">News</a></li>
+                                <li><a href="./activities.html"   data-locale="activities" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'"  >Tours and Travels</a></li>
+                                <li><a href="./tickets.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration = 'none'"  data-locale="tickets">Travel to Mongolia</a></li>
+                                <li><a href="./rental.html" style="color: #8D0070; background-color: #F9F9F9"data-locale="rental">Rental</a></li>
+                                <li><a href="./contact.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'"  data-locale="contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+		<h1>Want to rent something?</h1><br><br>
+		<div class="container-fluid panel-group">
+            <div id="filteredData" class="row">
+                <div class="col-sm-6">
+                    <p class="title">Lexus 470</p>
+                    <img src="../images/rentals/c1e3f316f2d951ca8f585d7f3d4cb28b.jpg" alt="Lexus 470" title="Lexus 470">
+                    <p><b>Avarage cost per a day:</b> USD 140</p>
+                    <p><b>Engine:</b> D & G</p>
+                    <p><b>Mobile:</b> (976-11) 7014-1001</p>
+                    <p><b>E-mail:</b> info@ttrmongolia.com</p>
+                </div>
+                 <div class="col-sm-6">
+                    <p class="title">Korean Sonata 6</p>
+                    <img src="../images/rentals/e848b0c4d2e5973bf20afbaf3e650a48.jpg" alt="Korean Sonata 6" title="Korean Sonata 6">
+                    <p><b>Avarage cost per a day:</b> USD 60</p>
+                    <p><b>Engine:</b> D & G</p>
+                    <p><b>Mobile:</b> (976-11) 7014-1001</p>
+                    <p><b>E-mail:</b> info@ttrmongolia.com</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="title">Korean Starex</p>
+                    <img src="../images/rentals/74ee1d6ae1ee60028d9b984f59384ccb.jpg" alt="Korean Starex" title="Korean Starex">
+                    <p><b>Avarage cost per a day:</b> USD 85</p>
+                    <p><b>Engine:</b> D & G</p>
+                    <p><b>Mobile:</b> (976-11) 7014-1001</p>
+                    <p><b>E-mail:</b> info@ttrmongolia.com</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="title">Toyota Land Cruiser 80</p>
+                    <img src="../images/rentals/c1e3f316f2d951ca8f585d7f3d4cb28b.jpg" alt="Toyota Land Cruiser 80" title="Toyota Land Cruiser 80">
+                    <p><b>Avarage cost per a day:</b> USD 80</p>
+                    <p><b>Engine:</b> D & G</p>
+                    <p><b>Mobile:</b> (976-11) 7014-1001</p>
+                    <p><b>E-mail:</b> info@ttrmongolia.com</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="title">Toyota Land Cruiser 100</p>
+                    <img src="../images/rentals/7b2500bbf7a9948440ef322e3b4d23e7.jpg" alt="Toyota Land Cruiser 100" title="Toyota Land Cruiser 100">
+                    <p><b>Avarage cost per a day:</b> USD 120</p>
+                    <p><b>Engine:</b> D & G</p>
+                    <p><b>Mobile:</b> (976-11) 7014-1001</p>
+                    <p><b>E-mail:</b> info@ttrmongolia.com</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="title">Russian Minivan</p>
+                    <img src="../images/rentals/a4adba035d397c876d5ddf2539c8038c.jpg" alt="Russian Minivan" title="Russian Minivan  ">
+                    <p><b>Avarage cost per a day:</b> USD 85</p>
+                    <p><b>Engine:</b> D & G</p>
+                    <p><b>Mobile:</b> (976-11) 7014-1001</p>
+                    <p><b>E-mail:</b> info@ttrmongolia.com</p>
+                </div>
+                
+            </div>  
+        </div>
+        <div id="footer"><p>© Copyright 2014 by TTR MONGOLIA - All Rights Reserved</p></div>
+        </div>
+    </body>
 </html>
