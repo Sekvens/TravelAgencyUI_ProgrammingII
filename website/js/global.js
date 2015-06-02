@@ -27,3 +27,101 @@ $(document).ready(function(){
     $("#slider").load("html/slider.html");
     
 });
+
+var contentLanguage = "eng";
+var dataContent = dataContent_en;
+
+var dataContent_en = {
+	todo: "See Mongolia",
+    news: "News",
+    activities: "Tours and Travels",
+    tickets: "Travel to Mongolia",
+    rental: "Rental",
+    contact: "Contact Us",
+    showFilter: "Show Filter",
+    searchOption: "Search Option",
+    searchByName: "Search by name:",
+    tourType: "Tour type",
+    typeShort: "&nbsp;Short&nbsp;",
+    typeClassic: "&nbsp;Classic&nbsp;",
+    typeSpecial: "&nbsp;Special&nbsp;",
+    bookNow: "Book Now!",
+    readMore: "Read More",
+    collapse: "Collpase",
+    description1 : "en",
+    description2 : "en",
+    description3 : "en",
+    description4 : "en",
+    description5 : "en"
+};
+    
+var dataContent_sv = {
+	todo: "Se Mongoliet",
+    news: "Nyheter",
+    activities: "Turer & Resor",
+    tickets: "Resa till Mongoliet",
+    rental: "Nummer",
+    contact: "Kontakta Oss",
+    showFilter: "Visa Filtret",
+    searchOption: "Sök Alternativ",
+    searchByName: "Sök efter namn:",
+    tourType: "Tour typ",
+    typeShort: "&nbsp;Kort&nbsp;",
+    typeClassic: "&nbsp;Klassisk&nbsp;",
+    typeSpecial: "&nbsp;Speciell&nbsp;",
+    bookNow: "Boka Nu!",
+    readMore: "Läs Mer",
+    collapse: "Kollaps",
+    description1 : "sv",
+    description2 : "sv",
+    description3 : "sv",
+    description4 : "sv",
+    description5 : "sv"
+};
+
+function changeLanguage(inputLang)
+{
+    if(inputLang != 'swe' && inputLang != 'eng')
+        return;
+
+    if(inputLang == 'swe')
+    {
+        contentLanguage = "swe";
+        var langPack = dataContent_sv;
+        document.getElementById('engFlag').style.borderColor = '#F9F9F9';
+        document.getElementById('sweFlag').style.borderColor = '#8E0070'; 
+        dataContent = dataContent_sv;
+    }
+    else if(inputLang == 'eng')
+    {
+        contentLanguage = "eng";
+        var langPack = dataContent_en;
+        document.getElementById('engFlag').style.borderColor = '#8E0070';
+        document.getElementById('sweFlag').style.borderColor = '#F9F9F9';
+        dataContent = dataContent_en;
+    }
+    else
+        return;
+
+    // data-locale for innerHTML Properties
+    var data = getAllElementsWithAttribute("data-locale");
+    
+    if(data.length == 0)
+        return;
+
+    for(var i = 0; i < data.length; i++)
+        data[i].innerHTML = langPack[data[i].getAttribute("data-locale")];
+    
+}
+
+function getAllElementsWithAttribute(input)
+{
+    var matchingElements = [];
+    var allElements = document.getElementsByTagName('*');
+    for (var i = 0, n = allElements.length; i < n; i++)
+    {
+        if (allElements[i].getAttribute(input) !== null)
+            matchingElements.push(allElements[i]);
+    }
+    return matchingElements;
+}
