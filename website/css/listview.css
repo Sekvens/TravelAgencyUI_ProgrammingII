@@ -6,15 +6,6 @@ body {
     color: rgb(67,74,84);
 }
 
-#container {
-    max-width: 960px;
-    margin: 0 auto;
-    border: 1px;
-    border-color: #E7E7E7;
-    border-style: line;
-    box-shadow: 0px 0px 5px #A6A6A6;
-}
-
 #header {
     height: 70px;
     background-color: whitesmoke;
