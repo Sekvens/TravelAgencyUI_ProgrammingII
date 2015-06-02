@@ -39,7 +39,16 @@ $(document).ready(function(){
             $('#main').load(this.attr('href'));
             return false;
         }
-    });        
+    });
+    
+    jQuery.fn.extend({
+        redirectInit: function (ev) {
+            ev.preventDefault();
+            initActivities();
+            this.redirect(ev);
+        }
+    });
+    
     
 });
 
