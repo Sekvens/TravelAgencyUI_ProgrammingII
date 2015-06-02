@@ -21,16 +21,14 @@ a:active  {color:blue; background-color:transparent; text-decoration:underline}
     padding:5px;
 }
 #nav {
-    font-family:georgia;
+    font-family: georgia, arial, sans-serif;
     line-height:2em;
     background-color:#eeeeee;
     color:#8D0070;
     width:100px;      
 }
-#article {
-    font-family:georgia;
-    width:450px;
-    float:left;
+article {
+    font-family: georgia, arial, sans-serif;
     padding:10px;
     line-height:1.5em 
 }
@@ -49,6 +47,9 @@ a:active  {color:blue; background-color:transparent; text-decoration:underline}
 #main {
     margin-left: 5%;
 }
+#body {
+    font-family: georgia, arial, sans-serif;
+}
 h1, h2, h3, h4, h5, h6 {
     font-weight: strong;
 }
@@ -62,6 +63,9 @@ h2 {
 .navbar-default .navbar-nav > li > a{
     color: #585858;
     background-color: #F9F9F9
+}
+.navbar-default {
+    background-color: #f9f9f9
 }
 .navbar-default .navbar-nav > li > a:hover{
     text-decoration: underline;
