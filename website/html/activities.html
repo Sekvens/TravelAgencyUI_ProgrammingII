@@ -6,8 +6,9 @@
 		<title>TTR Mongolia - Actions</title>
 		<meta name="description" content="Blueprint: Responsive Full Width Tabs" />
 		<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
-        <script src="../js/listView.js"></script>
         <script src="../js/actions_data.js"></script>
+        <script src="../js/listView.js"></script>
+        <script src="../js/langpacks.js"></script>
         <!-- Boothstrap -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/bootstrap.min.local.css">
@@ -16,7 +17,6 @@
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <link rel="stylesheet" type="text/css" href="http://www.cssreset.com/downloads/css-resets/html5-doctor-reset-stylesheet/html5-doctor-reset-stylesheet.css" />
-        <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../css/listView.css" />
     </head>
 	<body>
@@ -35,33 +35,36 @@
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2"  >
                             <ul class="nav navbar-nav">
-                                <li><a href="./todo.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration = 'none'">See Mongolia</a></li>
-                                <li><a href="./news.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'">News</a></li>
-                                <li><a href="./activities.html" style="color: #8D0070; background-color: #F9F9F9">Tours and Travels</a></li>
-                                <li><a href="./tickets.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration = 'none'">Travel to Mongolia</a></li>
-                                <li><a href="" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'">Rental</a></li>
-                                <li><a href="./contact.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'">Contact us</a></li>
+                                <li><a href="./todo.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration = 'none'" data-locale="todo">See Mongolia</a></li>
+                                <li><a href="./news.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'"  data-locale="news">News</a></li>
+                                <li><a href="./activities.html" style="color: #8D0070; background-color: #F9F9F9"  data-locale="activities">Tours and Travels</a></li>
+                                <li><a href="./tickets.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'" onmouseout="this.style.textDecoration = 'none'"  data-locale="tickets">Travel to Mongolia</a></li>
+                                <li><a href="" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'"  data-locale="rental">Rental</a></li>
+                                <li><a href="./contact.html" style="color: #585858; background-color: #F9F9F9" onmouseover="this.style.textDecoration ='underline'"  onmouseout="this.style.textDecoration = 'none'"  data-locale="contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
 <div style="clear:both"></div>
             <!--  ACTUAL CONTENT -->
-            <div id="content" style="z-index: -999">
+            <div id="content">
+                <div style="text-align: right;">
+                    <a onclick="changeLanguage('eng')"><img id="engFlag" style="width: 25px; border: 1px solid #8E0070;" src='../images/United-Kingdom-icon.png'></a>&nbsp<a onclick="changeLanguage('swe')"><img id="sweFlag" src='../images/Sweden-icon.png' style="width: 25px; border: 1px solid #F9F9F9;"></a>
+                </div>
                 <!-- BUTTON -->
                 <div style="text-align: right">
-                    <a class="btn btn-default" id="filterButton">Show Filter</a>
+                    <a class="btn btn-default" id="filterButton" data-locale="showFilter">Show Filter</a>
                 </div>
                 <!-- FILTER PANEL -->
                 <div id="filterPanel" class="panel panel-default">
                     <div class="form-group">
-                        <p style="margin: 0.5em">Search Option</p>
+                        <p style="margin: 0.5em" data-locale="searchOption">Search Option</p>
                         <div>
                         <div style="float: left; padding: 0.5em">
-                            <span>Search by name:</span><input style="margin: 0.5em; width: auto; display: inline" type="email" class="form-control" id="searchKey" placeholder="Search">                                                     </div>
+                            <span data-locale="searchByName">Search by name:</span><input style="margin: 0.5em; width: auto; display: inline" type="email" class="form-control" id="searchKey" placeholder="Search">                                                     </div>
                         <div style="float: right; padding: 0.5em; margin: 0.5em">
-                            Tour Type:&nbsp;<span>
-                            <input type="checkbox" id="chkShort" onchange="chkUpdate('Short')" checked="true">&nbsp;Short&nbsp;<input type="checkbox" id="chkClassic" onchange="chkUpdate('Classic')" checked="true">&nbsp;Classic&nbsp;<input type="checkbox" id="chkSpecial" onchange="chkUpdate('Special')" checked="true">&nbsp;Special</span>
+                            <span data-locale="tourType">Tour Type</span>:&nbsp;<span>
+                            <input type="checkbox" id="chkShort" onchange="chkUpdate('Short')" checked="true"><span  data-locale="typeShort">&nbsp;Short&nbsp;</span><input type="checkbox" id="chkClassic" onchange="chkUpdate('Classic')" checked="true"><span data-locale="typeClassic">&nbsp;Classic&nbsp;</span><input type="checkbox" id="chkSpecial" onchange="chkUpdate('Special')" checked="true"><span  data-locale="typeSpecial">&nbsp;Special</span></span>
                         </div>
                         <div style="clear: both"></div>
                         </div>
@@ -72,7 +75,7 @@
                     <div id="filteredData" class="row">
                     </div>
                 </div>
-                <a class="clickableText" style="display: block; clear: both">Book Now!</a>              
+                <a class="clickableText" style="display: block; clear: both" data-locale="bookNow">Book Now!</a>              
             </div>
             <div id="footer"><p>© Copyright 2014 by TTR MONGOLIA - All Rights Reserved</p></div>
         </div>

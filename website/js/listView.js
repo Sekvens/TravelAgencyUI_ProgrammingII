@@ -4,6 +4,8 @@ var expandingStage;
 var searchIndex;
 var checkTourType;
 var filterState = false;
+var contentLanguage = "eng";
+var dataContent = dataContent_en;
 
 // Constructor that initialize everything
 window.onload = function(){
@@ -189,7 +191,10 @@ function redrawContent() {
             var btnComponent = document.createElement("a");
             btnComponent.setAttribute("onclick","expandItem(" + i + ")");
             btnComponent.setAttribute("class", "clickableText");
-            btnComponent.innerHTML = "Read More";
+            if(contentLanguage == "eng")
+                btnComponent.innerHTML = "<span data-locale='readMore'>Read More</span>";
+            else if(contentLanguage == "swe")
+                btnComponent.innerHTML = "<span data-locale='readMore'>Läs Mer</span>";
             
             // insert these all parts into a main container
             component.appendChild(titleComponent);
@@ -278,7 +283,10 @@ function expandItem(itemNum) {
             clearComponent.setAttribute("style", "cleat: both;");
 
             var readMoreBtn = injContainer.parentNode.getElementsByClassName("clickableText");
-            readMoreBtn[1].innerHTML = "Collapse";
+            if(contentLanguage == "eng")
+                readMoreBtn[1].innerHTML = "<span data-locale='collapse'>Collapse</span>";
+            else if(contentLanguage == "swe")
+                readMoreBtn[1].innerHTML = "<span data-locale='collapse'>Kollaps</span>";
             
             injContainer.appendChild(imgCenter);
             injContainer.appendChild(tourDescription);
@@ -334,11 +342,61 @@ function expandItem(itemNum) {
         txtSubComponent.innerHTML = dataContent[itemNum].description;
         
         var readMoreBtn = injContainer.parentNode.getElementsByClassName("clickableText");
-        readMoreBtn[1].innerHTML = "Read More";
-        
+        if(contentLanguage == "eng")
+            readMoreBtn[1].innerHTML = "<span data-locale='readMore'>Read More</span>";
+        else if(contentLanguage == "swe")
+            readMoreBtn[1].innerHTML = "<span data-locale='readMore'>Läs Mer</span>";
+            
         // insert these all parts into a main container
         injContainer.appendChild(imgSubComponent);
         injContainer.appendChild(txtSubComponent);
     }
 }
 
+function changeLanguage(inputLang)
+{
+    if(inputLang != 'swe' && inputLang != 'eng')
+        return;
+
+    if(inputLang == 'swe')
+    {
+        contentLanguage = "swe";
+        var langPack = langPack_sv;
+        document.getElementById('engFlag').style.borderColor = '#F9F9F9';
+        document.getElementById('sweFlag').style.borderColor = '#8E0070'; 
+        dataContent = dataContent_sv;
+    }
+    else if(inputLang == 'eng')
+    {
+        contentLanguage = "eng";
+        var langPack = langPack_en;
+        document.getElementById('engFlag').style.borderColor = '#8E0070';
+        document.getElementById('sweFlag').style.borderColor = '#F9F9F9';
+        dataContent = dataContent_en;
+    }
+    else
+        return;
+
+    // data-locale for innerHTML Properties
+    var data = getAllElementsWithAttribute("data-locale");
+    
+    if(data.length == 0)
+        return;
+
+    for(var i = 0; i < data.length; i++)
+        data[i].innerHTML = langPack[data[i].getAttribute("data-locale")];
+    
+    redrawContent();
+}
+
+function getAllElementsWithAttribute(input)
+{
+    var matchingElements = [];
+    var allElements = document.getElementsByTagName('*');
+    for (var i = 0, n = allElements.length; i < n; i++)
+    {
+        if (allElements[i].getAttribute(input) !== null)
+            matchingElements.push(allElements[i]);
+    }
+    return matchingElements;
+}
