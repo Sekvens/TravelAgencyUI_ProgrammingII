@@ -22,8 +22,30 @@ $(document).ready(function(){
     /*Rescale the resizeable class when document is loaded*/
     rescale();
     
+    /*Apply stuff during load.*/
+    function doStuff(){
+        var tmp = document.getElementById("bs-example-navbar-collapse-2");
+        var links = tmp.getElementsByTagName("a");
+        for(var i = 0; i < links.length; i++)
+            console.log(links[i].href);    
+    }
+    
     /*Loading in different parts of the website.*/
-    $("#nav").load("html/header3.html");
+    // $("#nav").load("html/header3.html", doStuff());
+    $("#nav").load("html/header3.html", function (){
+        var tmp = document.getElementById("bs-example-navbar-collapse-2");
+        var links = tmp.getElementsByTagName("a");
+        for(var i = 0; i < links.length; i++)
+            console.log(links[i].href);    
+    });
     $("#slider").load("html/slider.html");
+    
+    jQuery.fn.extend({
+        redirect: function (ev) {
+            ev.preventDefault();
+            $('#main').load(this.attr('href'));
+            return false;
+        }
+    });        
     
 });
