@@ -20,16 +20,17 @@ a:active  {color:blue; background-color:transparent; text-decoration:underline}
     text-align:left;
     padding:5px;
 }
-#nav {
+#main nav {
     font-family: georgia, arial, sans-serif;
     line-height:2em;
     background-color:#eeeeee;
     color:#8D0070;
-    width:100px;      
+    width:100px;
+	float:left;
 }
 article {
     font-family: georgia, arial, sans-serif;
-    padding:1.5em;
+    padding:1.6em;
     line-height:1.5em;
 }
 #aside {
