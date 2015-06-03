@@ -20,18 +20,31 @@ a:active  {color:blue; background-color:transparent; text-decoration:underline}
     text-align:left;
     padding:5px;
 }
+#main {
+    position: relative;
+}
 #main nav {
     font-family: georgia, arial, sans-serif;
     line-height:2em;
     background-color:#eeeeee;
     color:#8D0070;
     width:100px;
-	float:left;
+    position: absolute;
+	left: -15px;
+    z-index: 1;
+    border: solid;
+    border-width: 2px;
+    clear: both;
+    border-radius: 20px;
+    padding: 5px;
 }
 article {
     font-family: georgia, arial, sans-serif;
-    padding:1.6em;
+    padding:1.5em;
     line-height:1.5em;
+    z-index: 3;
+/*     position: relative;
+    clear: both; */
 }
 #aside {
     font-family:georgia;
