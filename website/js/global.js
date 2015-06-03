@@ -36,8 +36,31 @@ $(document).ready(function(){
     jQuery.fn.extend({
         redirect: function (ev) {
             ev.preventDefault();
+            $(this).changeCurrent();
             $('#main').load(this.attr('href'));
         }
+    });
+    
+    jQuery.fn.extend({
+        redirect2: function (ev) {
+            ev.preventDefault();
+            $(this).changeCurrent2();
+            $('#main').load(this.attr('href'));
+        }
+    });
+    
+    jQuery.fn.extend({
+        changeCurrent: function () {
+        $("a").removeClass("currentAnchor");
+        $(this).addClass("currentAnchor");
+       }
+    });
+// ChangeCurrent2 does not work since it's overloaded by the new meny that's bound to the new todo page.
+    jQuery.fn.extend({
+        changeCurrent2: function () {
+        $("a").removeClass("currentSubAnchor");
+        $(this).addClass("currentSubAnchor2");
+       }
     });
     
     jQuery.fn.extend({
