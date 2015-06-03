@@ -113,7 +113,8 @@ padding: 0em 5em;
     color: #8D0070;
 }
 
-.currentSubAnchor{
-    background-color: #e9e9e9;
+nav > .currentSubAnchor{
+    /* background-color: #e9e9e9; */
+    font-weight: bold;
     color: #8D0070;
 }

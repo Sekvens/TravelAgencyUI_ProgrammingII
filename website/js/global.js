@@ -44,8 +44,8 @@ $(document).ready(function(){
     jQuery.fn.extend({
         redirect2: function (ev) {
             ev.preventDefault();
-            $(this).changeCurrent2();
             $('#main').load(this.attr('href'));
+            $(this).changeCurrent2();
         }
     });
     
@@ -55,12 +55,13 @@ $(document).ready(function(){
         $(this).addClass("currentAnchor");
        }
     });
-// ChangeCurrent2 does not work since it's overloaded by the new meny that's bound to the new todo page.
+// ChangeCurrent2 does not work since it's overloaded by the new meny that's bound to the new todo page. Added a hack class to target it.
     jQuery.fn.extend({
         changeCurrent2: function () {
+        var previousHackClass = $(this).attr('class');
         $("a").removeClass("currentSubAnchor");
-        $(this).addClass("currentSubAnchor2");
-       }
+        $("." + previousHackClass).addClass("currentSubAnchor");
+        }
     });
     
     jQuery.fn.extend({
