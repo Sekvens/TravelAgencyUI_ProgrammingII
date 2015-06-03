@@ -8,8 +8,7 @@ var contentLanguage = "eng";
 var dataContent = dataContent_en;
 
 // Constructor that initialize everything
-// window.onload = function(){
-function initActivities(){
+window.onload = function(){
     // Initialize expanding stage
     expandingStage  = new Array(dataContent.length)
     searchIndex = new Array(dataContent.length);
